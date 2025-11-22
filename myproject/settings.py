@@ -72,12 +72,23 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'django_test',
+        'USER': 'postgres',      # change to your PG username
+        'PASSWORD': 'Ashish@1250',
+        'HOST': 'localhost',     # use IP/domain if remote
+        'PORT': '5432',          # default PostgreSQL port
     }
 }
+
 
 
 # Password validation
